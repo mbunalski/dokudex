@@ -26,9 +26,9 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-          <button onClick={testfunc} id="test">Click Me</button>
+          <button onClick={testfunc} id="test">Click Me.</button>
 
-          
+
 
           {/* <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Test &rarr;</h3>
