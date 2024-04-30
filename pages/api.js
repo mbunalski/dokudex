@@ -12,12 +12,19 @@
 //   console.log('CORS-enabled web server listening on port 80')
 // })
 
-async function testfunc ()  {
+async function populateall ()  {
     console.log("Wammmy1")
-    const weatherResponse = await fetch(`http://127.0.0.1:5000/all`);
+    const allpokemon = await fetch(`http://127.0.0.1:5000/all`);
 
-    const weather = await weatherResponse.json();
-    console.log(weather)
+    const allpokemonjson = await allpokemon.json();
+    console.log(typeof allpokemonjson)
+
+    for (const pokemon in allpokemonjson){
+        const li = document.createElement('li');
+        li.innerText = pokemon
+        document.querySelector('ul#pokelist').appendChild(li);
+    }
+
 
   }
 
@@ -26,4 +33,4 @@ async function testfunc ()  {
     
 //     }
     
-    export default testfunc;
+    export default populateall;

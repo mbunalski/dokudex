@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import testfunc from './api'
+import populateall from './api'
 
 
 
@@ -24,9 +24,14 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
+        <div className={styles.container}>
+          <button onClick={populateall} id="test">Click Me.</button>
+          
+          <ul id="pokelist">
+            
+          </ul>
 
-          <button onClick={testfunc} id="test">Click Me.</button>
+
 
 
 
