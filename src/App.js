@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import {populateall} from './api'
+import {populateall, byType} from './api'
 import PokeFilter from './PokeFilter'
 import displayall from './history';
 
@@ -21,10 +21,10 @@ export default function landingpage() {
   
     <main>
 
-        <div  className={styles.container}>
+        <div  className={styles.container}> 
             <div id="filter" style={{backgroundColor: 'lightgreen'}}>
                 <button onClick={populateall} id="filter">Filter</button>
-                <button onClick={displayall} id="filter">History</button>
+                <button onClick={populateall} id="filter">History</button>
             </div>
 
             <div id="display" style={{backgroundColor: 'lightblue'}}>

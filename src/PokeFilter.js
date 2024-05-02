@@ -1,5 +1,5 @@
 import React from 'react';
-import {populateall} from './api'
+import {populateall, byType} from './api'
 
 function test1(value) {
   console.log(value)
@@ -17,7 +17,7 @@ class PokeFilter extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {value: 'fire'};
+    this.state = {value: 'Fire'};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
@@ -25,12 +25,12 @@ class PokeFilter extends React.Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
-    console.log(event.target.value);
   }
   handleSubmit(event) {
     // alert('Your favorite flavor is: ' + this.state.value);
+    byType(this.state.value);
     event.preventDefault();
-    console.log(this.state.value);
+
   }
   componentDidMount() {
     // call api or anything
