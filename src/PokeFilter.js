@@ -1,10 +1,6 @@
 import React from 'react';
 import {populateall, byType} from './api'
 
-function test1(value) {
-  console.log(value)
-}
-
 const types = [
   {type:"Fire"},
   {type:"Water"},

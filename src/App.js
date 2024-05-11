@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import {populateall, byType} from './api'
 import PokeFilter from './PokeFilter'
 import displayall from './history';
+import {DisplayFilter} from './DisplayFilter';
 
 
 export default function landingpage() {
@@ -17,6 +18,7 @@ export default function landingpage() {
       Welcome to DOKU DEX
   </h1>
   <PokeFilter />
+  <DisplayFilter />
 
   
     <main>
