@@ -1,4 +1,6 @@
-export function PokeMetric() {
+import React from 'react';
+
+export function PokeMetric({update, metric}) {
     const types = [
         {type:"Fire"},
         {type:"Water"},
@@ -7,16 +9,22 @@ export function PokeMetric() {
       
       ]
 
+    function handleChange(event) {
+        console.log("PokeMetric handleChange")
+        metric(event.target.value)
+
+    }  
+
     return (
 
-        <div>
-            <h3>Dropdown Menu</h3>
-            <select>
+        <>
+            <label>Filter: </label>
+            <select onChange={handleChange}>
                 {types.map(type => (
                     <option value={type.type}>{type.type}</option>
                 ))}
             </select>
-        </div>
+        </>
 
     );
 
