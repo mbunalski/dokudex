@@ -1,7 +1,9 @@
-export function PokeInfo(){
+export function PokeInfo({pokemon}){
     return(
-        <div>
-            Wamp
-        </div>
+        <>
+            <li>
+                {pokemon}
+            </li>
+        </>
     );
 }

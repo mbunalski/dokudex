@@ -12,6 +12,7 @@ export function PokeMetric({update, metric}) {
     function handleChange(event) {
         console.log("PokeMetric handleChange")
         metric(event.target.value)
+        update()
 
     }  
 
