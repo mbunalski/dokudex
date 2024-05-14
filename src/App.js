@@ -38,10 +38,8 @@ export default function landingpage() {
     }
 
     function UpdateMetricOne(str) {
-        console.log("This is in the APP file")
         setMetricone(str)
-        console.log(metricone)
-        console.log(metrictwo)
+
     }
   return <div className={styles.container}>
   <Head>
