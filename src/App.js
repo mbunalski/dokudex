@@ -10,11 +10,10 @@ import {useState} from 'react';
 
 export default function landingpage() {
     const [pokelist, setPokelist] = useState([[]]);
-    const [metricone, setMetricone] = useState("None");
-    const [metrictwo, setMetrictwo] = useState("None");
+    const [metricone, setMetricone] = useState("Water");
+    const [metrictwo, setMetrictwo] = useState("Water");
 
     function UpdateList() {
-        // setPokelist(filtered(metricone, metrictwo));
         console.log("UpdateList")
         // console.log(typeof populateall())
         // populateall().then(x => {
@@ -23,14 +22,6 @@ export default function landingpage() {
         Promise.all([filtered(metricone, metrictwo)]).then(x => {
             setPokelist(x)
         });
-        // console.log("above")
-        // console.log(populateall().then(x => {
-        //     return x
-        // }));
-        // console.log("below")
-        // console.log(pokelist)
-        // console.log(metricone)
-        // console.log(metrictwo)
     }
 
     function UpdateMetricTwo(str) {
@@ -38,10 +29,8 @@ export default function landingpage() {
     }
 
     function UpdateMetricOne(str) {
-        console.log("This is in the APP file")
         setMetricone(str)
-        console.log(metricone)
-        console.log(metrictwo)
+
     }
   return <div className={styles.container}>
   <Head>

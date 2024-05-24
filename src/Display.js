@@ -21,15 +21,10 @@ export function Display({pokelist}){
     return(
         <div>
             <ul>
-                
                 {pokelist[0].map(pokemon => (
                     <PokeInfo pokemon={pokemon} />
                 ))}
-                
-       
- 
             </ul>
-            
         </div>
     );
 }
