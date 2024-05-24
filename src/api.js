@@ -41,8 +41,8 @@ export async function populateall ()  {
   } 
 
   export async function filtered (metric1, metric2)  {
-    console.log("filtered api call")
-    const allpokemon = await fetch(`http://127.0.0.1:5000/type/${metric1}`);
+    console.log("filtered api call ", metric1, " ",  metric2)
+    const allpokemon = await fetch(`http://127.0.0.1:5000/types/${metric1}_${metric2}`);
 
     const allpokemonjson = await allpokemon.json();
 

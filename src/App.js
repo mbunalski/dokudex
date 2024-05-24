@@ -20,7 +20,7 @@ export default function landingpage() {
         // populateall().then(x => {
         //     return x
         // })
-        Promise.all([populateall()]).then(x => {
+        Promise.all([filtered(metricone, metrictwo)]).then(x => {
             setPokelist(x)
         });
         // console.log("above")
