@@ -1,6 +1,7 @@
-import React from 'react';
+// import React from 'react';
+import React, {useEffect} from 'react';
 
-export function PokeMetric({update, metric}) {
+export function PokeMetric({metric}) {
     const types = [
         {type:"Fire"},
         {type:"Water"},
@@ -11,10 +12,12 @@ export function PokeMetric({update, metric}) {
 
     function handleChange(event) {
         console.log("PokeMetric handleChange")
+        console.log("Value being used from filter: ", event.target.value)
         metric(event.target.value)
-        update()
+        console.log("Value being used from filter: ", event.target.value)
+        
 
-    }  
+    }
 
     return (
 
