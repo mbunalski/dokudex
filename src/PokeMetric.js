@@ -6,7 +6,21 @@ export function PokeMetric({metric}) {
         {type:"Fire"},
         {type:"Water"},
         {type:"Grass"},
-        {type:"Ground"}
+        {type:"Ground"},
+        {type:"Fiary"},
+        {type:"Dark"},
+        {type:"Dragon"},
+        {type:"Ice"},
+        {type:"Electric"},
+        {type:"Psychic"},
+        {type:"Steel"},
+        {type:"Ghost"},
+        {type:"Bug"},
+        {type:"Rock"},
+        {type:"Poison"},
+        {type:"Flying"},
+        {type:"Normal"},
+        {type:"Fighting"}
       
       ]
 
@@ -25,7 +39,7 @@ export function PokeMetric({metric}) {
             <label>Filter: </label>
             <select onChange={handleChange}>
                 {types.map(type => (
-                    <option value={type.type}>{type.type}</option>
+                    <option key={type.type} value={type.type}>{type.type}</option>
                 ))}
             </select>
         </>

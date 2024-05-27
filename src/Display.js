@@ -22,7 +22,7 @@ export function Display({pokelist}){
         <div>
             <ul>
                 {pokelist[0].map(pokemon => (
-                    <PokeInfo pokemon={pokemon} />
+                    <PokeInfo key={pokemon} pokemon={pokemon} />
                 ))}
             </ul>
         </div>
