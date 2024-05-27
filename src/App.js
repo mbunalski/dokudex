@@ -10,8 +10,8 @@ import {useState, useEffect} from 'react';
 
 export default function landingpage() {
     const [pokelist, setPokelist] = useState([[]]);
-    const [metricone, setMetricone] = useState("Water");
-    const [metrictwo, setMetrictwo] = useState("Water");
+    const [metricone, setMetricone] = useState("Fire");
+    const [metrictwo, setMetrictwo] = useState("Fire");
 
     useEffect(() =>{
         UpdateList()
