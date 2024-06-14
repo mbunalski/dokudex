@@ -23,7 +23,7 @@ export async function populateall ()  {
   
   export async function byType (str)  {
     console.log("byType api call")
-    const allpokemon = await fetch(`http://127.0.0.1:5000/type/${str}`);
+    const allpokemon = await fetch(`https://database-dev.sc0cnr40cdhve.us-east-1.cs.amazonlightsail.com/type/${str}`);
 
     const allpokemonjson = await allpokemon.json();
 
@@ -42,7 +42,7 @@ export async function populateall ()  {
 
   export async function filtered (metric1, metric2)  {
     console.log("filtered api call ", metric1, " ",  metric2)
-    const allpokemon = await fetch(`http://127.0.0.1:5000/types/${metric1}_${metric2}`);
+    const allpokemon = await fetch(`https://database-dev.sc0cnr40cdhve.us-east-1.cs.amazonlightsail.com/types/${metric1}_${metric2}`);
 
     const allpokemonjson = await allpokemon.json();
 
