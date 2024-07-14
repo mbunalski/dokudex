@@ -4,15 +4,16 @@ import 'reactjs-popup/dist/index.css';
  
 export function PokeInfo({pokemon}) {
     return (
-        <div>
+        <>
             <Popup trigger=
-                {<button> {pokemon} </button>} 
+                {<button> <img src={`/images/${String(pokemon).replace(",","")}.png`}></img>{pokemon}</button>} 
                 modal nested>
                 {
                     close => (
                         <div className='modal'>
-                            <div className='content'>
-                                {pokemon}
+                            <div className='content' >
+                                <img src={`/images/${String(pokemon).replace(",","")}.png`}></img>
+                                {pokemon} 
                             </div>
                             <div>
                                 <button onClick=
@@ -24,6 +25,6 @@ export function PokeInfo({pokemon}) {
                     )
                 }
             </Popup>
-        </div>
+        </>
     )
 };
