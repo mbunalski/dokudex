@@ -1,3 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  * {
+    box-sizing: border-box;
+    @apply text-gray-300;
+    @apply border-gray-400;
+    @apply text-inherit;
+
+  }
+  
+  div{
+    @apply bg-gray-200;
+  }
+  h1 {
+    @apply text-3xl;
+    @apply font-bold;
+
+  }
+
+  
+  
+}
+
 html,
 body {
   padding: 0;

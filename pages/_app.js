@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import {populateall, byType, filtered} from './api'
-import PokeFilter from './PokeFilter'
-import displayall from './history';
-import {DisplayFilter} from './DisplayFilter';
-import {Display} from './Display';
+import {populateall, byType, filtered} from '../src/api'
+import {DisplayFilter} from '../src/DisplayFilter';
+import {Display} from '../src/Display';
 import {useState, useEffect} from 'react';
+import '../styles/global.css';
 
 
 export default function landingpage() {
@@ -38,14 +37,14 @@ export default function landingpage() {
         setMetricone(str)
 
     }
-  return <div className={styles.container}>
+  return <div className="">
   <Head>
     <title>Your DEX for DOKU</title>
     <link rel="icon" href="/favicon.ico" />
   </Head>
   
 
-  <h1 className={styles.title}>
+  <h1 className="">
       Welcome to DOKU DEX
   </h1>
 
