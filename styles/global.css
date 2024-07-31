@@ -20,6 +20,19 @@
     @apply font-bold;
 
   }
+  ul {
+    @apply flex;
+    @apply flex-col;
+  }
+  li {
+    @apply border;
+    @apply border-gray-400;
+    @apply border-2;
+  }
+  button {
+    @apply flex;
+    @apply flex-row;
+  }
 
   
   

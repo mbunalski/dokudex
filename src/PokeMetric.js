@@ -3,11 +3,11 @@ import React, {useEffect} from 'react';
 
 export function PokeMetric({metric}) {
     const types = [
-        {type:"Fire"},
+        {type:"[Type]"},
         {type:"Water"},
         {type:"Grass"},
         {type:"Ground"},
-        {type:"Fiary"},
+        {type:"Fairy"},
         {type:"Dark"},
         {type:"Dragon"},
         {type:"Ice"},
@@ -20,9 +20,15 @@ export function PokeMetric({metric}) {
         {type:"Poison"},
         {type:"Flying"},
         {type:"Normal"},
-        {type:"Fighting"}
-      
+        {type:"Fighting"},
+        {type:"Fire"}
       ]
+    const categories = [
+        {type:"[Category]"},
+        {type:"Water"},
+        {type:"Water"}
+        
+      ]  
 
     function handleChange(event) {
         console.log("PokeMetric handleChange")
@@ -36,7 +42,6 @@ export function PokeMetric({metric}) {
     return (
 
         <>
-            <label>Filter: </label>
             <select onChange={handleChange}>
                 {types.map(type => (
                     <option key={type.type} value={type.type}>{type.type}</option>

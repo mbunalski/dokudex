@@ -9,8 +9,8 @@ import '../styles/global.css';
 
 export default function landingpage() {
     const [pokelist, setPokelist] = useState([[]]);
-    const [metricone, setMetricone] = useState("Fire");
-    const [metrictwo, setMetrictwo] = useState("Fire");
+    const [metricone, setMetricone] = useState("Type");
+    const [metrictwo, setMetrictwo] = useState("Type");
 
     useEffect(() =>{
         UpdateList()
@@ -18,10 +18,7 @@ export default function landingpage() {
 
     function UpdateList() {
         console.log("UpdateList")
-        // console.log(typeof populateall())
-        // populateall().then(x => {
-        //     return x
-        // })
+  
         Promise.all([filtered(metricone, metrictwo)]).then(x => {
             setPokelist(x)
         });
@@ -37,19 +34,19 @@ export default function landingpage() {
         setMetricone(str)
 
     }
-  return <div className="">
-  <Head>
-    <title>Your DEX for DOKU</title>
-    <link rel="icon" href="/favicon.ico" />
-  </Head>
-  
+  return <>
+            <Head>
+                <title>Your DEX for DOKU</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            
 
-  <h1 className="">
-      Welcome to DOKU DEX
-  </h1>
+            <h1 className="">
+                Welcome to DOKU DEX
+            </h1>
 
-  <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} />
-  <Display pokelist={pokelist}/>
+            <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} />
+            <Display pokelist={pokelist}/>
 
-    </div>  
+        </>  
 }
