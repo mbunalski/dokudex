@@ -40,9 +40,9 @@ export default function landingpage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             
-            <div>
-            <div class="sticky">
-            <h1 className="">
+            <div class="h-screen">
+            <div >
+            <h1>
                 Welcome to DOKU DEX
             </h1>
             <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} />
