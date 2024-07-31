@@ -6,6 +6,7 @@
 
   * {
     box-sizing: border-box;
+    @apply bg-gray-200;
     @apply text-gray-300;
     @apply border-gray-400;
     @apply text-inherit;
@@ -14,6 +15,11 @@
   
   div{
     @apply bg-gray-200;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply items-center;
+    
   }
   h1 {
     @apply text-3xl;
@@ -32,6 +38,9 @@
   button {
     @apply flex;
     @apply flex-row;
+  }
+  img {
+    @apply w-16;
   }
 
   

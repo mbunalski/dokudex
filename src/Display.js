@@ -19,12 +19,14 @@ import {PokeInfo} from './PokeInfo';
 export function Display({pokelist}){
 
     return(
-        <div>
+        <div class="">
+        <div class="overflow-y-auto">
             <ul>
                 {pokelist[0].map(pokemon => (
                     <PokeInfo key={pokemon} pokemon={pokemon} />
                 ))}
             </ul>
+        </div>
         </div>
     );
 }

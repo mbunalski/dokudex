@@ -40,13 +40,15 @@ export default function landingpage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             
-
+            <div>
+            <div class="sticky">
             <h1 className="">
                 Welcome to DOKU DEX
             </h1>
-
             <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} />
-            <Display pokelist={pokelist}/>
+            </div>
 
+            <Display pokelist={pokelist}/>
+            </div>
         </>  
 }
