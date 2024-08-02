@@ -20,6 +20,7 @@
     @apply justify-center;
     @apply items-center;
     
+    
   }
   h1 {
     @apply text-3xl;
@@ -31,9 +32,13 @@
     @apply flex-col;
   }
   li {
-    @apply border;
-    @apply border-gray-400;
-    @apply border-2;
+    @apply m-1;
+    @apply rounded-lg;
+    @apply shadow-inner;
+    @apply shadow-md;
+    @apply shadow-zinc-800;
+    @apply hover:bg-gray-300;
+    
   }
   button {
     @apply flex;
@@ -41,6 +46,8 @@
   }
   img {
     @apply w-16;
+    @apply rounded-lg;
+    @apply bg-inherit;
   }
 
   

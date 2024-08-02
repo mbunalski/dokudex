@@ -6,7 +6,7 @@ export function PokeInfo({pokemon}) {
     return (
         <li>
             <Popup trigger=
-                {<button> <img src={`/images/${String(pokemon).replace(",","")}.png`}></img><div>{pokemon}</div></button>} 
+                {<button> <img src={`/images/${String(pokemon).replace(",","")}.png`}></img><div class="bg-inherit">{pokemon}</div></button>} 
                 modal nested>
                 {
                     close => (
