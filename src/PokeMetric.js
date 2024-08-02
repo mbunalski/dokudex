@@ -25,8 +25,8 @@ export function PokeMetric({metric}) {
       ]
     const categories = [
         {type:"[Category]"},
-        {type:"Water"},
-        {type:"Water"}
+        {type:"Type"},
+        {type:"Generation"}
         
       ]  
 
@@ -42,11 +42,18 @@ export function PokeMetric({metric}) {
     return (
 
         <>
+            <div class="flex-row">        
+            <select onChange={handleChange}>
+                {categories.map(type => (
+                    <option key={type.type} value={type.type}>{type.type}</option>
+                ))}
+            </select>
             <select onChange={handleChange}>
                 {types.map(type => (
                     <option key={type.type} value={type.type}>{type.type}</option>
                 ))}
             </select>
+            </div>
         </>
 
     );

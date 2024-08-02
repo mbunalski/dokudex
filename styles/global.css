@@ -25,6 +25,7 @@
   h1 {
     @apply text-3xl;
     @apply font-bold;
+    @apply m-4
 
   }
   ul {
@@ -32,11 +33,12 @@
     @apply flex-col;
   }
   li {
-    @apply m-1;
+    @apply mt-1;
+    @apply mx-1;
     @apply rounded-lg;
     @apply shadow-inner;
     @apply shadow-md;
-    @apply shadow-zinc-800;
+    @apply shadow-zinc-400;
     @apply hover:bg-gray-300;
     
   }
