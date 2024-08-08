@@ -11,15 +11,17 @@ export default function landingpage() {
     const [pokelist, setPokelist] = useState([[]]);
     const [metricone, setMetricone] = useState("Type");
     const [metrictwo, setMetrictwo] = useState("Type");
+    const [categoryone, setCategoryone] = useState("Category");
+    const [categorytwo, setCategorytwo] = useState("Category");
 
     useEffect(() =>{
         UpdateList()
-    }, [metricone, metrictwo]);
+    }, [metricone, metrictwo, categoryone,categorytwo]);
 
     function UpdateList() {
         console.log("UpdateList")
   
-        Promise.all([filtered(metricone, metrictwo)]).then(x => {
+        Promise.all([filtered(metricone, metrictwo, categoryone, categorytwo)]).then(x => {
             setPokelist(x)
         });
     }
@@ -32,7 +34,14 @@ export default function landingpage() {
     function UpdateMetricOne(str) {
         console.log("Update Metric1")
         setMetricone(str)
+    }
 
+    function UpdateCategoryTwo(str) {
+        setCategorytwo(str)
+    }
+
+    function UpdateCategoryOne(str) {
+        setCategoryone(str)
     }
   return <>
             <Head>
@@ -45,7 +54,7 @@ export default function landingpage() {
             <h1>
                 Welcome to DOKU DEX
             </h1>
-            <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} />
+            <DisplayFilter metric1={UpdateMetricOne} metric2={UpdateMetricTwo} category1={UpdateCategoryOne} category2={UpdateCategoryTwo}/>
             </div>
 
             <Display pokelist={pokelist}/>
