@@ -27,8 +27,8 @@ export async function populateall ()  {
   
   export async function filtered (metric1, metric2, category1, category2)  {
     console.log("filtered api call ", metric1, " ",  metric2)
-    // const env = 'https://database-dev.sc0cnr40cdhve.us-east-1.cs.amazonlightsail.com';
-    const env = 'http://127.0.0.1:5001';
+    const env = 'https://database-dev.sc0cnr40cdhve.us-east-1.cs.amazonlightsail.com';
+    // const env = 'http://127.0.0.1:5001';
     if (category1 === 'Category'){
       const pokemonm1 = await fetch(env + `/all`);
       const pokemonjsonm1 = await pokemonm1.json();
