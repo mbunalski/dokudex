@@ -1,7 +1,9 @@
 // import React from 'react';
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 
 export function PokeMetric({metric, category}) {
+    const [selections, setSelections] = useState([{type:"[Select]"}]);
+
     const types = [
         {type:"[Type]"},
         {type:"Water"},
@@ -23,23 +25,74 @@ export function PokeMetric({metric, category}) {
         {type:"Fighting"},
         {type:"Fire"}
       ]
+
+    const generations = [
+        {type:"[Region]"},
+        {type:"Kanto"},
+        {type:"Johto"},
+        {type:"Hoenn"},
+        {type:"Sinnoh"},
+        {type:"Unova"},
+        {type:"Kalos"},
+        {type:"Alola"},
+        {type:"Galar"},
+        {type:"Paldea"}
+    ]  
     const categories = [
         {type:"[Category]"},
         {type:"Type"},
-        {type:"Generation"}
-        
-      ]  
+        {type:"Mono-Type"},
+        {type:"Dual-Type"},
+        {type:"Generation"},
+        {type:"First"},
+        {type:"Middle"},
+        {type:"Final"},
+        {type:"Paradox"},
+        {type:"Mega"},
+        {type:"GMAX"},
+        {type:"Fossil"},
+        {type:"Starter"},
+        {type:"Legendary"},
+        {type:"Mythical"},
+        {type:"Baby"},
+        {type:"Move"},
+        {type:"Evolution"}
+      ]
+      
+      const evolutions =[
+        {type:"[Type]"},
+        {type:"None"},
+        {type:"Item"},
+        {type:"Time"},
+        {type:"Friendship"},
+        {type:"Trade"}
+
+      ]
+
+      const noValues =[
+        {type:"[Select]"}
+      ]
 
     function handleChange(event) {
         if (event.target.id==='category'){
             category(event.target.value)
+            metric(event.target.value)
+            if (event.target.value ==='Type'){
+                setSelections(types)
+            }else if (event.target.value ==='Evolution'){
+                setSelections(evolutions)
+            }else if (event.target.value ==='Generation'){
+                setSelections(generations)
+            }else{
+                setSelections(noValues)
+            }
+                
+
             console.log("Category Change " + event.target.value)
         }else{
             metric(event.target.value)
             console.log("Category Type " + event.target.value)
         }
-        
-        
     }
 
     return (
@@ -52,7 +105,7 @@ export function PokeMetric({metric, category}) {
                 ))}
             </select>
             <select id='type' onChange={handleChange}>
-                {types.map(type => (
+                {selections.map(type => (
                     <option key={type.type} value={type.type}>{type.type}</option>
                 ))}
             </select>
